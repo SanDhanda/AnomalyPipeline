@@ -91,7 +91,7 @@ func main() {
 	fmt.Printf("Dead-lettered:           %d\n", stats.DeadLettered)
 	fmt.Printf("Anomalies injected:      %d\n", stats.InjectedAnomalies)
 	fmt.Printf("Alerts raised:           %d (true %d, false %d)\n", stats.Alerts, stats.TruePositives, stats.FalsePositives)
-	fmt.Printf("Precision / recall:      %.0f%% / %.0f%%\n", precision, recall)
+	fmt.Printf("Precision / recall:      %f / %f\n", precision*100, recall*100)
 	fmt.Printf("Elapsed:                 %.2f\n", seconds)
 	fmt.Printf("Throughput:              %.0f  events/sec\n", float64(stats.Processed)/seconds)
 
